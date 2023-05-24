@@ -1,0 +1,32 @@
+:host{
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px;
+}
+
+// Modificamos los estilos de CARD de MATERIAL
+
+mat-card{
+    max-width: 400px;
+    margin: 2em;
+    text-align: center;
+}
+mat-card-header{
+    // desactiva el display flex y lo centra en el medio al titulo
+    display: unset;
+}
+mat-card-subtitle{
+    margin-bottom: 20px;
+}
+mat-card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+// Modificamos los estilos de los campos del formulario de angular material
+mat-form-field{
+    display: block;
+    min-width: 300px;
+    width: 100%;
+}

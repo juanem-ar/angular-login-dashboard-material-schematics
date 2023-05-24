@@ -1,0 +1,41 @@
+<div class="container">
+    <h1>Bienvenido a la App del amigo invisible!</h1>
+
+
+    <ng-container *ngIf="contactoSeleccionado;else noSeleccionado">
+        <h4 >
+            Tu amigo invisible es: {{contactoSeleccionado | nombreCompleto}}
+        </h4>
+    </ng-container>
+    <ng-template #noSeleccionado>
+        <h4 *ngIf="token">
+            Selecciona un amigo de la lista
+        </h4>
+    </ng-template>
+    <div *ngIf="token">
+        <button mat-raised-button color="primary" (click)="navegarAContacts()">
+            Ver todos tus contactos
+        </button>
+    
+        <div>
+            <h3>Filtros:</h3>
+            <button mat-raised-button color="primary" routerLink="/dashboard/contacts" [queryParams]="{gender:'female'}">
+                Ver mujeres
+            </button> -
+            <button mat-raised-button color="primary" routerLink="/dashboard/contacts" [queryParams]="{gender:'male'}">
+                Ver hombres
+            </button>
+        </div>
+        <div>
+            <h3>Random Contact:</h3>
+            <button mat-raised-button color="primary" routerLink="/dashboard/randomUser" >
+                Ver Random
+            </button>
+        </div>
+        
+    </div>
+    
+    
+    <a routerLink="/login" *ngIf="!token" mat-raised-button color="primary" >Iniciar Sesión</a>
+    
+</div>

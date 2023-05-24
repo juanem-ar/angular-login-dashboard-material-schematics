@@ -1,0 +1,45 @@
+<!-- Armamos el login form usando angular material -->
+<mat-card>
+
+    <!-- Cabecera de la tarjeta -->
+    <mat-card-header>
+        <mat-card-title>Bienvenido!</mat-card-title>
+        <mat-card-subtitle>Ingresa a la app del amigo invisible</mat-card-subtitle>
+    </mat-card-header>
+    <!-- Contenido del formulario -->
+    <mat-card-content>
+
+        <!-- Formulario -->
+        <form [formGroup]="loginForm" (submit)="submit()">
+            
+                <mat-form-field>
+                    <!-- Email -->
+                    <input matInput placeholder="email" formControlName="email" />
+                    <mat-error *ngIf="email?.errors?.['required'] && email?.touched">
+                         Introduce: '{{emailHardcoded}}'
+                    </mat-error>
+                    <mat-error *ngIf="email?.errors?.['email'] && email?.touched">
+                        El formato del email no es correcto. Introduce: '{{emailHardcoded}}'
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <!-- PASSWORD -->
+                    <input matInput placeholder="password" formControlName="password" [type]="hide ? 'password': 'text'"/>
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>
+                            {{hide ? 'visibility_off' : 'visibility'}}
+                        </mat-icon>
+                      </button>
+                    <mat-error *ngIf="password?.errors?.['required'] && password?.touched">
+                        El campo password es obligatorio. Introduce: '{{passwordHardcoded}}'
+                    </mat-error>
+                </mat-form-field>
+                <!-- Boton de submit del formulario -->
+                <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">
+                    Iniciar sesión
+                </button>
+        </form>
+
+    </mat-card-content>
+
+</mat-card>

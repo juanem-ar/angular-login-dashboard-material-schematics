@@ -1,0 +1,44 @@
+{
+  "results": [
+    {
+      "gender": "female",
+      "name": { "title": "Mrs", "first": "Kaća", "last": "Selaković" },
+      "location": {
+        "street": { "number": 6329, "name": "Lipa" },
+        "city": "Bač",
+        "state": "Rasina",
+        "country": "Serbia",
+        "postcode": 67464,
+        "coordinates": { "latitude": "56.6138", "longitude": "95.6127" },
+        "timezone": { "offset": "+4:30", "description": "Kabul" }
+      },
+      "email": "kaca.selakovic@example.com",
+      "login": {
+        "uuid": "6a8aa60b-a45b-44fa-aaab-66dcd87a9fb1",
+        "username": "redgorilla442",
+        "password": "obiwan",
+        "salt": "qwTr8OQO",
+        "md5": "0f8578ec1bc66a83c7624ea646d2d000",
+        "sha1": "7a91939eae64c0197441b95166cfd8d6c542f286",
+        "sha256": "179f742ca27a0544ee3aad8981571e8f51ede7d7d5dad1970bac34a749549f79"
+      },
+      "dob": { "date": "1991-03-29T07:37:28.984Z", "age": 32 },
+      "registered": { "date": "2017-06-26T12:00:09.173Z", "age": 5 },
+      "phone": "024-6697-082",
+      "cell": "062-0623-104",
+      "id": { "name": "SID", "value": "477823704" },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/79.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/79.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/79.jpg"
+      },
+      "nat": "RS"
+    }
+  ],
+  "info": {
+    "seed": "d1a3aaef3465b937",
+    "results": 1,
+    "page": 1,
+    "version": "1.4"
+  }
+}

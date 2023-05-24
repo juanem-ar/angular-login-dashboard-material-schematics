@@ -1,0 +1,13 @@
+<h1>Detalle de Contacto:</h1>
+
+<ng-container *ngIf="contacto;else errorCargaContacto">
+    <h2>ID:{{id}}</h2>
+    <h2>Nombre: {{contacto | nombreCompleto}}</h2>
+    <h2>Email: {{contacto.email}}</h2>
+    <h2>Sexo: {{contacto.gender}}</h2>
+</ng-container>
+<ng-template #errorCargaContacto>
+    <h2>No has seleccionado ningun contacto</h2>
+</ng-template>
+<button mat-raised-button color="primary" routerLink="/dashboard/contacts" [queryParams]="{sexo:filtroPrevio}">Volver</button> -
+<button mat-raised-button color="primary" routerLink="/dashboard/home">Volver al Home</button>
